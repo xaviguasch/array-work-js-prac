@@ -76,14 +76,28 @@
 // in a sentence.
 // eg: getVowelCount("In West Philadelphia, born and raised") => 12
 
-function getVowelCount(str) {
-  const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+// function getVowelCount(str) {
+//   const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
 
-  const letters = str.split('')
+//   const letters = str.split('')
 
-  const extractedVowels = letters.filter((letter) => vowels.includes(letter))
+//   const extractedVowels = letters.filter((letter) => vowels.includes(letter))
 
-  return extractedVowels.length
+//   return extractedVowels.length
+// }
+
+// console.log(getVowelCount('In West Philadelphia, born and raised'))
+
+////////////////////////////////////////////////////////////////////
+
+// Using "split", "map" and "join" write a function that capitalises the
+// first letter of each word in a sentence.
+// eg: capitalise("the queens gambit") => "The Queens Gambit"
+
+function capitalise(str) {
+  const splittedSent = str.split(' ')
+
+  return splittedSent.map((word) => word[0].toUpperCase() + word.slice(1)).join(' ')
 }
 
-console.log(getVowelCount('In West Philadelphia, born and raised'))
+console.log(capitalise('the queens gambit'))
