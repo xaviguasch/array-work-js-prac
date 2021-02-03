@@ -64,10 +64,10 @@ console.log(getWords(['Florida', 'dog', 'phone'], 5))
 // as strings, into an arrayof numbers.
 // eg. getValues(["23cm", "5.6cm", "1000cm"]) => [23, 5.6, 1000]
 
-// function getValues(arr) {
-//   return
-// }
+function getValues(arr) {
+  return arr.map((value) => parseFloat(value))
+}
 
-// console.log(getValues(['23cm', '5.6cm', '1000cm']))
+console.log(getValues(['23cm', '5.6cm', '1000cm']))
 
 ////////////////////////////////////////////////////////////////////
