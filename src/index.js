@@ -52,11 +52,11 @@
 // elements of an array that have a given length or larger.
 // eg: getWords(["Florida", "dog", "phone"]) => ["Florida", "Phone"]
 
-function getWords(arr, number) {
-  return arr.filter((word) => word.length >= number)
-}
+// function getWords(arr, number) {
+//   return arr.filter((word) => word.length >= number)
+// }
 
-console.log(getWords(['Florida', 'dog', 'phone'], 5))
+// console.log(getWords(['Florida', 'dog', 'phone'], 5))
 
 ////////////////////////////////////////////////////////////////////
 
@@ -64,10 +64,26 @@ console.log(getWords(['Florida', 'dog', 'phone'], 5))
 // as strings, into an arrayof numbers.
 // eg. getValues(["23cm", "5.6cm", "1000cm"]) => [23, 5.6, 1000]
 
-function getValues(arr) {
-  return arr.map((value) => parseFloat(value))
-}
+// function getValues(arr) {
+//   return arr.map((value) => parseFloat(value))
+// }
 
-console.log(getValues(['23cm', '5.6cm', '1000cm']))
+// console.log(getValues(['23cm', '5.6cm', '1000cm']))
 
 ////////////////////////////////////////////////////////////////////
+
+// Using "split" and "filter" write a function that counts the number of vowels
+// in a sentence.
+// eg: getVowelCount("In West Philadelphia, born and raised") => 12
+
+function getVowelCount(str) {
+  const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+
+  const letters = str.split('')
+
+  const extractedVowels = letters.filter((letter) => vowels.includes(letter))
+
+  return extractedVowels.length
+}
+
+console.log(getVowelCount('In West Philadelphia, born and raised'))
