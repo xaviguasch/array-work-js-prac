@@ -26,8 +26,22 @@
 // of characters in an array of strings.
 // eg: getTotal(["Rabbit", "Football", "Cracking"]) => 22
 
-function getTotal(arr) {
-  return arr.reduce((acc, word) => acc + word.length, 0)
+// function getTotal(arr) {
+//   return arr.reduce((acc, word) => acc + word.length, 0)
+// }
+
+// console.log(getTotal(['Rabbit', 'Football', 'Cracking']))
+
+////////////////////////////////////////////////////////////////////
+
+// Using "every" write a function that checks whether every number in an
+// array is a square number.
+// eg: checkSquared([9, 16, 81]) => true
+
+function checkSquares(arr) {
+  //   return arr.every((num) => Math.sqrt(num) % 1 === 0)
+
+  return arr.every((num) => Math.pow(Math.sqrt(num), 2) === num)
 }
 
-console.log(getTotal(['Rabbit', 'Football', 'Cracking']))
+console.log(checkSquares([9, 16, 81]))
