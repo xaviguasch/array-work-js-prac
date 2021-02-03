@@ -38,10 +38,36 @@
 // array is a square number.
 // eg: checkSquared([9, 16, 81]) => true
 
-function checkSquares(arr) {
-  //   return arr.every((num) => Math.sqrt(num) % 1 === 0)
+// function checkSquares(arr) {
+//   //   return arr.every((num) => Math.sqrt(num) % 1 === 0)
 
-  return arr.every((num) => Math.pow(Math.sqrt(num), 2) === num)
+//   return arr.every((num) => Math.pow(Math.sqrt(num), 2) === num)
+// }
+
+// console.log(checkSquares([9, 16, 81]))
+
+////////////////////////////////////////////////////////////////////
+
+// Using an array method, write a function that returns the stirng
+// elements of an array that have a given length or larger.
+// eg: getWords(["Florida", "dog", "phone"]) => ["Florida", "Phone"]
+
+function getWords(arr, number) {
+  return arr.filter((word) => word.length >= number)
 }
 
-console.log(checkSquares([9, 16, 81]))
+console.log(getWords(['Florida', 'dog', 'phone'], 5))
+
+////////////////////////////////////////////////////////////////////
+
+//  Using and array method, write a function that converts an array of cm values
+// as strings, into an arrayof numbers.
+// eg. getValues(["23cm", "5.6cm", "1000cm"]) => [23, 5.6, 1000]
+
+// function getValues(arr) {
+//   return
+// }
+
+// console.log(getValues(['23cm', '5.6cm', '1000cm']))
+
+////////////////////////////////////////////////////////////////////
